@@ -1,0 +1,22 @@
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+## If the URL does not map to an existing project directory,
+## and if it does not map to an existing file on the file-system,
+## forward the request to the default `html` directory which is
+## the designated parent / root website
+RewriteCond %{REQUEST_URI} !^/?project-one/
+RewriteCond %{REQUEST_URI} !^/?project-two/
+RewriteCond %{REQUEST_URI} !^/?project-three/
+# we stop the processing if the URL begins with "html" because
+# that is the end result, i.e. the re-written URL starts with an "html"
+# and since the rule-chain is run through again and again
+# until the final rewritten URL does not change twice in a row
+# the below RewriteCond prevents the rule-processing from getting into an infinite loop
+RewriteCond %{REQUEST_URI} !^/?html/
+RewriteCond %{REQUEST_URI} ^/?(.*)
+RewriteRule .? html/%1 [QSA,L]
+
+</IfModule>
