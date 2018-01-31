@@ -7,9 +7,9 @@ RewriteEngine On
 ## and if it does not map to an existing file on the file-system,
 ## forward the request to the default `html` directory which is
 ## the designated parent / root website
-RewriteCond %{REQUEST_URI} !^/?project-one/
-RewriteCond %{REQUEST_URI} !^/?project-two/
-RewriteCond %{REQUEST_URI} !^/?project-three/
+RewriteCond %{REQUEST_URI} !^/?outstanding/
+RewriteCond %{REQUEST_URI} !^/?mediocurry/
+RewriteCond %{REQUEST_URI} !^/?not-bad-bad/
 # we stop the processing if the URL begins with "html" because
 # that is the end result, i.e. the re-written URL starts with an "html"
 # and since the rule-chain is run through again and again
