@@ -110,7 +110,7 @@ a2enmod rewrite
 
 
 # Adding a new project
-When a new project is to be hosted on the server, duplicate the line ( you'll know when you see it ) in the `.htaccess` file, and change the text to correspond to the folder name where this project's files will be stored.
+When a new project is to be hosted on the server, duplicate the line that follows the comment `# ADD NEW PROJECTS HERE` in the `.htaccess` file, and change the text to correspond to the folder name where this project's files will be stored.
 
 
 
