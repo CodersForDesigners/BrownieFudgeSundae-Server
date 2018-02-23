@@ -1,6 +1,8 @@
 
 Here, we explain the setup required on the servers' end to get your site (or sites) up and running.
 
+For a no-fluff only-powerpuff straight-forward no-explanation sequence of instructions that gets you to the same end-point as this document, refer to [The Fudge List](fudgelist.md).
+
 Here’s what you got to do,
 
 - Create a droplet on DigitalOcean that has Apache and PHP pre-installed
